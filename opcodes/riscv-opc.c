@@ -198,6 +198,11 @@ match_srxi_as_c_srxi (const struct riscv_opcode *op, insn_t insn)
 const struct riscv_opcode riscv_opcodes[] =
 {
 /* name,     xlen, isa,   operands, match, mask, match_func, pinfo.  */
+{​"sha512sig0"​, 0, INSN_CLASS_C,​ "d,s"​ , MATCH_SHA512SIG0, ​ ​ MASK_SHA512SIG0​ , match_opcode​ ,  0 ​},
+{​"sha512sig1"​, 0, INSN_CLASS_C,​ "d,s"​ , MATCH_SHA512SIG1​, ​ ​ MASK_SHA512SIG1​ , match_opcode​ ,  0 ​},
+{​"sha512sum0"​, 0, INSN_CLASS_C,​ "d,s"​ , MATCH_SHA512SUM0​, ​ ​ MASK_SHA512SUM0​ , match_opcode​ ,  0 ​},
+{​"sha512sum1"​, 0, INSN_CLASS_C,​ "d,s"​ , MATCH_SHA512SUM1​, ​ ​ MASK_SHA512SUM1​ , match_opcode​ ,  0 ​},
+
 {"unimp",       0, INSN_CLASS_C,   "",  0, 0xffffU,  match_opcode, INSN_ALIAS },
 {"unimp",       0, INSN_CLASS_I,   "",  MATCH_CSRRW | (CSR_CYCLE << OP_SH_CSR), 0xffffffffU,  match_opcode, 0 }, /* csrw cycle, x0 */
 {"ebreak",      0, INSN_CLASS_C,   "",  MATCH_C_EBREAK, MASK_C_EBREAK, match_opcode, INSN_ALIAS },
