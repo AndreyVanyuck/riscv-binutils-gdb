@@ -21,6 +21,16 @@
 #ifndef RISCV_ENCODING_H
 #define RISCV_ENCODING_H
 /* Instruction opcode macros.  */
+
+#define MATCH_SHA512SIG0 0xe40702b
+#define MASK_SHA512SIG0  0xfff0707f
+#define MATCH_SHA512SIG1 0xe50702b
+#define MASK_SHA512SIG1  0xfff0707f
+#define MATCH_SHA512SUM0 0xe60702b
+#define MASK_SHA512SUM0  0xfff0707f
+#define MATCH_SHA512SUM1 0xe70702b
+#define MASK_SHA512SUM1  0xfff0707f
+
 #define MATCH_SLLI_RV32 0x1013
 #define MASK_SLLI_RV32  0xfe00707f
 #define MATCH_SRLI_RV32 0x5013
